@@ -19,6 +19,8 @@ const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
     <meta name="description" content={description} />
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
