@@ -18,3 +18,18 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+:root {
+  --bg: #0d0f12;
+  --bg-raised: #15181d;
+  --border: #23272e;
+  --text: #d6d9de;
+  --text-muted: #8a919c;
+  --accent: #7ee0b5;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
