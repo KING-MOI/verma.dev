@@ -48,3 +48,13 @@ code,
 pre {
   font-family: var(--font-mono);
 }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
