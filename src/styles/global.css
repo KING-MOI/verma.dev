@@ -64,3 +64,19 @@ main {
   margin: 0 auto;
   padding: 3rem 1.25rem 5rem;
 }
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #f2f4f7;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
