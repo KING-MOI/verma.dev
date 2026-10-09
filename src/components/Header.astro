@@ -12,3 +12,27 @@ const links = [
     {links.map((l) => <a href={l.href}>{l.label}</a>)}
   </nav>
 </header>
+
+<style>
+  header {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--text);
+  }
+</style>
