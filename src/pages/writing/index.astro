@@ -22,3 +22,27 @@ const posts = byNewest(await getCollection("writing"));
     }
   </ul>
 </Base>
+
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  li {
+    display: flex;
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+
+  time {
+    flex-shrink: 0;
+    width: 7rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+  }
+</style>
