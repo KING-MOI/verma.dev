@@ -1,8 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import { byNewest } from "../../lib/posts";
+import { formatDate } from "../../lib/format";
 
-const posts = await getCollection("writing");
+const posts = byNewest(await getCollection("writing"));
 ---
 
 <Base title="Writing">
