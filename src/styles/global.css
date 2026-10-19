@@ -97,3 +97,20 @@ h2 {
 .prose li + li {
   margin-top: 0.4em;
 }
+
+:not(pre) > code {
+  padding: 0.1em 0.35em;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
