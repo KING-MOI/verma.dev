@@ -3,6 +3,20 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-  <h1>Aditya Verma</h1>
-  <p>Devtools and AI agents.</p>
+  <section class="hero">
+    <h1>Aditya Verma</h1>
+    <p>
+      I build developer tools and AI agents: small, sharp utilities for the
+      terminal and the menu bar, and the plumbing that keeps agents honest.
+    </p>
+  </section>
 </Base>
+
+<style>
+  .hero p {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 36rem;
+  }
+</style>
