@@ -23,7 +23,9 @@ const minutes = readingTime(post.body ?? "");
         · {minutes} min read
       </p>
     </header>
-    <Content />
+    <div class="prose">
+      <Content />
+    </div>
   </article>
 </Base>
 
