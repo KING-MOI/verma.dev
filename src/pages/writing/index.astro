@@ -1,48 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
 import { byNewest } from "../../lib/posts";
-import { formatDate } from "../../lib/format";
 
 const posts = byNewest(await getCollection("writing"));
 ---
 
 <Base title="Writing">
   <h1>Writing</h1>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <time datetime={post.data.date.toISOString()}>
-            {formatDate(post.data.date)}
-          </time>
-          <a href={`/writing/${post.id}`}>{post.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <PostList posts={posts} />
 </Base>
-
-<style>
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  li {
-    display: flex;
-    gap: 1.25rem;
-    align-items: baseline;
-  }
-
-  time {
-    flex-shrink: 0;
-    width: 7rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-  }
-</style>

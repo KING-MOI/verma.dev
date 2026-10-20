@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import { projects } from "../data/projects";
 import { getCollection } from "astro:content";
 import { byNewest } from "../lib/posts";
-import { formatDate } from "../lib/format";
+import PostList from "../components/PostList.astro";
 
 const posts = byNewest(await getCollection("writing"));
 ---
@@ -27,18 +27,7 @@ const posts = byNewest(await getCollection("writing"));
 
   <section>
     <h2>Writing</h2>
-    <ul class="posts">
-      {
-        posts.map((post) => (
-          <li>
-            <time datetime={post.data.date.toISOString()}>
-              {formatDate(post.data.date)}
-            </time>
-            <a href={`/writing/${post.id}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    <PostList posts={posts} />
   </section>
 </Base>
 
