@@ -1,9 +1,15 @@
 ---
+import { SOCIAL } from "../consts";
+
 const year = new Date().getFullYear();
 ---
 
 <footer>
   <p>© {year} Aditya Verma</p>
+  <p class="links">
+    <a href={SOCIAL.github}>github</a>
+    <a href={SOCIAL.email}>email</a>
+  </p>
 </footer>
 
 <style>
@@ -14,5 +20,16 @@ const year = new Date().getFullYear();
     border-top: 1px solid var(--border);
     color: var(--text-muted);
     font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .links a {
+    color: inherit;
   }
 </style>
