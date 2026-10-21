@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { SOCIAL } from "../consts";
 ---
 
 <Base title="About" description="About Aditya Verma.">
@@ -22,5 +23,10 @@ import Base from "../layouts/Base.astro";
       <li>TypeScript for anything that touches the web or git</li>
       <li>Python for data, scripts and LLM tooling</li>
     </ul>
+    <h2>Say hi</h2>
+    <p>
+      I'm on <a href={SOCIAL.github}>GitHub</a>, or you can
+      <a href={SOCIAL.email}>email me</a>.
+    </p>
   </div>
 </Base>
