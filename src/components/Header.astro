@@ -5,11 +5,21 @@ const links = [
   { href: "/writing", label: "writing" },
   { href: "/about", label: "about" },
 ];
+
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
 ---
 
 <header>
   <nav>
-    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    {
+      links.map((l) => (
+        <a href={l.href} aria-current={isActive(l.href) ? "page" : undefined}>
+          {l.label}
+        </a>
+      ))
+    }
   </nav>
 </header>
 
@@ -32,7 +42,8 @@ const links = [
     text-decoration: none;
   }
 
-  nav a:hover {
+  nav a:hover,
+  nav a[aria-current="page"] {
     color: var(--text);
   }
 </style>
