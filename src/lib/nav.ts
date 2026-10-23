@@ -1,3 +1,4 @@
 export function isActive(path: string, href: string): boolean {
-  return href === "/" ? path === "/" : path.startsWith(href);
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(`${href}/`);
 }
