@@ -22,6 +22,10 @@ const fullTitle = title ? `${title} · ${SITE_TITLE}` : SITE_TITLE;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
