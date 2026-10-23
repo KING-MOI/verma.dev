@@ -134,3 +134,8 @@ pre {
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
