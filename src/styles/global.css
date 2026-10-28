@@ -139,3 +139,7 @@ pre {
   background: var(--accent);
   color: var(--bg);
 }
+
+html {
+  scroll-padding-top: 2rem;
+}
