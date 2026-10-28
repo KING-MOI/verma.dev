@@ -31,7 +31,7 @@ way people skim logs: top first, looking for the line that matters. So:
 - put the important number first,
 - fail loudly with a non-zero exit code and a one-line reason.
 
-That last one is the whole reason I wrote [branchmaid](/projects) the way I
+That last one is the whole reason I wrote [branchmaid](/projects/) the way I
 did. It prints exactly what it is about to delete and exits non-zero if
 anything looks off. A person can read that. So can an agent.
 

@@ -8,7 +8,7 @@ For a while my answer to "how much do your agents cost?" was a shrug and a
 number off the billing page. The number was real. It just didn't tell me
 anything I could act on.
 
-So I wrote [tokentally](/projects), a small Python CLI that reads usage logs
+So I wrote [tokentally](/projects/), a small Python CLI that reads usage logs
 and breaks spend down by model, by project and by day. A month later, here is
 what the numbers said.
 
@@ -19,7 +19,7 @@ every five tokens I paid for were *input*: the system prompt, tool schemas,
 and the same files being re-read turn after turn.
 
 The fix was unglamorous. Shorter system prompts, fewer tools (see
-[boring tools](/writing/agents-need-boring-tools)), and caching anything that
+[boring tools](/writing/agents-need-boring-tools/)), and caching anything that
 does not change between turns.
 
 ## One project was most of the bill
