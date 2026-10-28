@@ -8,7 +8,7 @@ For a while my answer to "how much do your agents cost?" was a shrug and a
 number off the billing page. The number was real. It just didn't tell me
 anything I could act on.
 
-So I wrote [tokentally](/projects/), a small Python CLI that reads usage logs
+So I wrote [tokentally](/projects/#tokentally), a small Python CLI that reads usage logs
 and breaks spend down by model, by project and by day. A month later, here is
 what the numbers said.
 
