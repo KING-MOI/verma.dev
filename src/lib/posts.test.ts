@@ -17,8 +17,12 @@ describe("byNewest", () => {
 });
 
 describe("isPublished", () => {
-  it("hides drafts outside dev", () => {
-    expect(isPublished({ data: { draft: true } })).toBe(import.meta.env.DEV);
-    expect(isPublished({ data: { draft: false } })).toBe(true);
+  it("hides drafts in production", () => {
+    expect(isPublished({ data: { draft: true } }, false)).toBe(false);
+    expect(isPublished({ data: { draft: false } }, false)).toBe(true);
+  });
+
+  it("shows drafts in dev", () => {
+    expect(isPublished({ data: { draft: true } }, true)).toBe(true);
   });
 });
