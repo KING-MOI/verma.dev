@@ -8,3 +8,11 @@ export function isPublished(
 ): boolean {
   return dev || !post.data.draft;
 }
+
+export function neighbors<T extends { id: string }>(posts: T[], id: string) {
+  const i = posts.findIndex((p) => p.id === id);
+  return {
+    newer: i > 0 ? posts[i - 1] : undefined,
+    older: i >= 0 && i < posts.length - 1 ? posts[i + 1] : undefined,
+  };
+}

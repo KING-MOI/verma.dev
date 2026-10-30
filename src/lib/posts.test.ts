@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { byNewest, isPublished } from "./posts";
+import { byNewest, isPublished, neighbors } from "./posts";
 
 const post = (id: string, date: string) => ({ id, data: { date: new Date(date) } });
 
@@ -24,5 +24,25 @@ describe("isPublished", () => {
 
   it("shows drafts in dev", () => {
     expect(isPublished({ data: { draft: true } }, true)).toBe(true);
+  });
+});
+
+describe("neighbors", () => {
+  const posts = [{ id: "c" }, { id: "b" }, { id: "a" }];
+
+  it("finds the newer and older post", () => {
+    expect(neighbors(posts, "b")).toEqual({ newer: { id: "c" }, older: { id: "a" } });
+  });
+
+  it("has no newer post for the newest", () => {
+    expect(neighbors(posts, "c").newer).toBeUndefined();
+  });
+
+  it("has no older post for the oldest", () => {
+    expect(neighbors(posts, "a").older).toBeUndefined();
+  });
+
+  it("returns nothing for an unknown id", () => {
+    expect(neighbors(posts, "zz")).toEqual({ newer: undefined, older: undefined });
   });
 });
