@@ -1,11 +1,12 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import { getPosts } from "../../lib/content";
 import { formatDate } from "../../lib/format";
 import { readingTime } from "../../lib/reading-time";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("writing");
+  const posts = await getPosts();
   return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
 }
 
