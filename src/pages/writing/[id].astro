@@ -19,7 +19,7 @@ const { Content } = await render(post);
 const minutes = readingTime(post.body ?? "");
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.title} description={post.data.description} type="article">
   <article>
     <header>
       <h1>{post.data.title}</h1>
