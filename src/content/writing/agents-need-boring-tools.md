@@ -15,9 +15,16 @@ handful of commands that already exist: `git`, `grep`, `curl`, a test runner.
 ## Why boring wins
 
 Models have read a staggering amount of shell transcripts. They know what
-`git diff --stat` prints. They know `grep -rn` returns `file:line:match`. When
-you hand them a tool they have seen a million times, you get the benefit of
-all that training for free.
+`git diff --stat` prints. They know `grep -rn` returns `file:line:match`:
+
+```sh
+$ grep -rn "TODO" src
+src/cli.ts:42:  // TODO: handle detached HEAD
+src/git.ts:7:  // TODO: cache remote list
+```
+
+When you hand them a tool they have seen a million times, you get the benefit
+of all that training for free.
 
 A bespoke `search_codebase(query, scope, mode)` tool gets none of it. The model
 has to learn your semantics from a docstring, in context, every single run.
