@@ -5,4 +5,9 @@ export default defineConfig({
   site: "https://verma.dev",
   trailingSlash: "always",
   integrations: [sitemap()],
+  markdown: {
+    shikiConfig: {
+      theme: "github-dark-dimmed",
+    },
+  },
 });
