@@ -143,3 +143,12 @@ pre {
 html {
   scroll-padding-top: 2rem;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
