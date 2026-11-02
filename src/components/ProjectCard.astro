@@ -21,6 +21,11 @@ const { project } = Astro.props;
     background: var(--bg-raised);
     border: 1px solid var(--border);
     border-radius: 8px;
+    transition: border-color 150ms ease;
+  }
+
+  .card:hover {
+    border-color: #39404b;
   }
 
   h2 {
