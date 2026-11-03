@@ -17,6 +17,7 @@ const { project } = Astro.props;
 
 <style>
   .card {
+    position: relative;
     padding: 1.25rem;
     background: var(--bg-raised);
     border: 1px solid var(--border);
@@ -36,6 +37,12 @@ const { project } = Astro.props;
   h2 a {
     color: inherit;
     text-decoration: none;
+  }
+
+  h2 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
   }
 
   .tagline,
