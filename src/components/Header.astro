@@ -2,7 +2,6 @@
 import { isActive } from "../lib/nav";
 
 const links = [
-  { href: "/", label: "home" },
   { href: "/projects/", label: "projects" },
   { href: "/writing/", label: "writing" },
   { href: "/about/", label: "about" },
@@ -12,6 +11,7 @@ const path = Astro.url.pathname;
 ---
 
 <header>
+  <a class="name" href="/">aditya verma</a>
   <nav>
     {
       links.map((l) => (
@@ -28,6 +28,21 @@ const path = Astro.url.pathname;
     max-width: 42rem;
     margin: 0 auto;
     padding: 1.5rem 1.25rem 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .name {
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    text-decoration: none;
   }
 
   nav {
