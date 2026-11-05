@@ -40,3 +40,19 @@ src/
   pages/        routes
 public/         favicon, robots.txt, CNAME
 ```
+
+## Writing a post
+
+Add a markdown file to `src/content/writing/`:
+
+```md
+---
+title: Post title
+description: One sentence for the index, RSS and search results.
+date: 2026-11-01
+draft: true
+---
+```
+
+Drafts show up in `npm run dev` and are left out of the build, the RSS feed and
+the sitemap. Remove `draft` to publish.
