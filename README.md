@@ -56,3 +56,13 @@ draft: true
 
 Drafts show up in `npm run dev` and are left out of the build, the RSS feed and
 the sitemap. Remove `draft` to publish.
+
+## Deploying
+
+Pushes to `main` run `.github/workflows/deploy.yml`, which tests, builds and
+publishes `dist/` to GitHub Pages. In the repo settings, set Pages to deploy
+from GitHub Actions. `public/CNAME` points the site at `verma.dev`.
+
+## License
+
+[MIT](LICENSE)
