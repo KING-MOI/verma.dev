@@ -27,3 +27,16 @@ npm run dev
 | `npm run preview` | serve the built site               |
 | `npm run check`   | type check `.astro` and `.ts`      |
 | `npm test`        | unit tests with vitest             |
+
+## Layout
+
+```
+src/
+  components/   header, footer, project cards, post list
+  content/      markdown posts
+  data/         project list
+  layouts/      base html shell
+  lib/          small helpers, each with a test next to it
+  pages/        routes
+public/         favicon, robots.txt, CNAME
+```
