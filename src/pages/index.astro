@@ -15,6 +15,10 @@ const posts = await getPosts();
       I build developer tools and AI agents: small, sharp utilities for the
       terminal and the menu bar, and the plumbing that keeps agents honest.
     </p>
+    <p class="cta">
+      <a href="/projects/">see projects</a>
+      <a href="/writing/">read writing</a>
+    </p>
   </section>
 
   <section>
@@ -29,6 +33,13 @@ const posts = await getPosts();
 </Base>
 
 <style>
+  .hero .cta {
+    display: flex;
+    gap: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+  }
+
   section + section {
     margin-top: 3.5rem;
   }
