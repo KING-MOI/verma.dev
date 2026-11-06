@@ -4,11 +4,21 @@ import ProjectGrid from "../components/ProjectGrid.astro";
 import { projects } from "../data/projects";
 import { getPosts } from "../lib/content";
 import PostList from "../components/PostList.astro";
+import { SITE_TITLE, SOCIAL } from "../consts";
+import { serializeJsonLd } from "../lib/json-ld";
 
 const posts = (await getPosts()).slice(0, 3);
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE_TITLE,
+  url: Astro.site,
+  sameAs: [SOCIAL.github],
+};
 ---
 
 <Base>
+  <script type="application/ld+json" set:html={serializeJsonLd(person)} />
   <section class="hero">
     <h1>Aditya Verma</h1>
     <p>
