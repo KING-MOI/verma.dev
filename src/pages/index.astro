@@ -5,7 +5,7 @@ import { projects } from "../data/projects";
 import { getPosts } from "../lib/content";
 import PostList from "../components/PostList.astro";
 
-const posts = await getPosts();
+const posts = (await getPosts()).slice(0, 3);
 ---
 
 <Base>
@@ -29,10 +29,16 @@ const posts = await getPosts();
   <section>
     <h2>Writing</h2>
     <PostList posts={posts} />
+    <p class="more"><a href="/writing/">all writing →</a></p>
   </section>
 </Base>
 
 <style>
+  .more {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+  }
+
   .hero .cta {
     display: flex;
     gap: 1.25rem;
