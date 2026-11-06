@@ -17,9 +17,18 @@ export async function getStaticPaths() {
 const { post, newer, older } = Astro.props;
 const { Content } = await render(post);
 const minutes = readingTime(post.body ?? "");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  author: { "@type": "Person", name: "Aditya Verma" },
+};
 ---
 
 <Base title={post.data.title} description={post.data.description} type="article">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article>
     <header>
       <h1>{post.data.title}</h1>
