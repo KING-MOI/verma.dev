@@ -27,6 +27,7 @@ npm run dev
 | `npm run preview` | serve the built site               |
 | `npm run check`   | type check `.astro` and `.ts`      |
 | `npm test`        | unit tests with vitest             |
+| `npm run check:links` | check internal links in `dist/` |
 
 ## Layout
 
