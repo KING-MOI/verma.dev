@@ -11,15 +11,15 @@ const path = Astro.url.pathname;
 ---
 
 <header>
-  <a class="name" href="/">aditya verma</a>
+  <a class="name" href="/">
+    aditya verma
+  </a>
   <nav>
-    {
-      links.map((l) => (
-        <a href={l.href} aria-current={isActive(path, l.href) ? "page" : undefined}>
-          {l.label}
-        </a>
-      ))
-    }
+    {links.map((l) => (
+      <a href={l.href} aria-current={isActive(path, l.href) ? "page" : undefined}>
+        {l.label}
+      </a>
+    ))}
   </nav>
 </header>
 

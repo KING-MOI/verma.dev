@@ -10,16 +10,12 @@ const { posts } = Astro.props;
 ---
 
 <ul>
-  {
-    posts.map((post) => (
-      <li>
-        <time datetime={post.data.date.toISOString()}>
-          {formatDate(post.data.date)}
-        </time>
-        <a href={`/writing/${post.id}/`}>{post.data.title}</a>
-      </li>
-    ))
-  }
+  {posts.map((post) => (
+    <li>
+      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      <a href={`/writing/${post.id}/`}>{post.data.title}</a>
+    </li>
+  ))}
 </ul>
 
 <style>

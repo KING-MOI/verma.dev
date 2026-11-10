@@ -34,8 +34,8 @@ const jsonLd = {
     <header>
       <h1>{post.data.title}</h1>
       <p class="meta">
-        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
-        · {minutes} min read
+        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>·{" "}
+        {minutes} min read
       </p>
     </header>
     <div class="prose">
@@ -44,7 +44,11 @@ const jsonLd = {
   </article>
   <nav class="pager">
     {older && <a href={`/writing/${older.id}/`}>← {older.data.title}</a>}
-    {newer && <a class="newer" href={`/writing/${newer.id}/`}>{newer.data.title} →</a>}
+    {newer && (
+      <a class="newer" href={`/writing/${newer.id}/`}>
+        {newer.data.title} →
+      </a>
+    )}
   </nav>
 </Base>
 

@@ -9,7 +9,9 @@ const { project } = Astro.props;
 ---
 
 <article class="card" id={project.name}>
-  <h2><a href={project.repo}>{project.name}</a></h2>
+  <h2>
+    <a href={project.repo}>{project.name}</a>
+  </h2>
   <p class="tagline">{project.tagline}</p>
   <p>{project.description}</p>
   <p class="lang">{project.language}</p>

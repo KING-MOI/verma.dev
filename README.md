@@ -20,14 +20,14 @@ npm run dev
 
 ## Scripts
 
-| command           | what it does                       |
-| ----------------- | ---------------------------------- |
-| `npm run dev`     | local dev server with drafts shown |
-| `npm run build`   | static build into `dist/`          |
-| `npm run preview` | serve the built site               |
-| `npm run check`   | type check `.astro` and `.ts`      |
-| `npm test`        | unit tests with vitest             |
-| `npm run check:links` | check internal links in `dist/` |
+| command               | what it does                       |
+| --------------------- | ---------------------------------- |
+| `npm run dev`         | local dev server with drafts shown |
+| `npm run build`       | static build into `dist/`          |
+| `npm run preview`     | serve the built site               |
+| `npm run check`       | type check `.astro` and `.ts`      |
+| `npm test`            | unit tests with vitest             |
+| `npm run check:links` | check internal links in `dist/`    |
 
 ## Layout
 

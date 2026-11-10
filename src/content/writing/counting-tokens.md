@@ -15,7 +15,7 @@ what the numbers said.
 ## Most tokens are input, not output
 
 I expected long generations to dominate. They didn't. Roughly four out of
-every five tokens I paid for were *input*: the system prompt, tool schemas,
+every five tokens I paid for were _input_: the system prompt, tool schemas,
 and the same files being re-read turn after turn.
 
 The fix was unglamorous. Shorter system prompts, fewer tools (see

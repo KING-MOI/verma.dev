@@ -4,7 +4,9 @@ import { extractHrefs, internalTarget } from "./links";
 describe("internalTarget", () => {
   it("maps directory links to their index.html", () => {
     expect(internalTarget("/")).toBe("/index.html");
-    expect(internalTarget("/writing/small-loops/")).toBe("/writing/small-loops/index.html");
+    expect(internalTarget("/writing/small-loops/")).toBe(
+      "/writing/small-loops/index.html",
+    );
   });
 
   it("keeps file links as they are", () => {
@@ -26,7 +28,8 @@ describe("internalTarget", () => {
 
 describe("extractHrefs", () => {
   it("pulls href and src attributes", () => {
-    const html = '<a href="/about/">a</a><img src="/me.png"><link rel="icon" href="/favicon.svg">';
+    const html =
+      '<a href="/about/">a</a><img src="/me.png"><link rel="icon" href="/favicon.svg">';
     expect(extractHrefs(html)).toEqual(["/about/", "/me.png", "/favicon.svg"]);
   });
 });
