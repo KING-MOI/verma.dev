@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run",
-    "check:links": "node scripts/check-links.ts"
+    "check:links": "node scripts/check-links.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
