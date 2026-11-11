@@ -175,8 +175,8 @@ hr {
     color-scheme: light;
   }
 
-  header,
-  footer,
+  .site-header,
+  .site-footer,
   .skip,
   .pager {
     display: none;
