@@ -164,3 +164,21 @@ hr {
   border-top: 1px solid var(--border);
   margin: 2.5rem 0;
 }
+
+@media print {
+  :root {
+    --bg: #fff;
+    --bg-raised: #fff;
+    --text: #111;
+    --text-muted: #444;
+    --accent: #111;
+    color-scheme: light;
+  }
+
+  header,
+  footer,
+  .skip,
+  .pager {
+    display: none;
+  }
+}
