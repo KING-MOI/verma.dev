@@ -1,5 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
+import PostList from "../components/PostList.astro";
+import { getPosts } from "../lib/content";
+
+const posts = (await getPosts()).slice(0, 3);
 ---
 
 <Base title="Not found" noindex>
@@ -7,4 +11,12 @@ import Base from "../layouts/Base.astro";
   <p>
     Nothing here. Try the <a href="/">home page</a>.
   </p>
+  <h2>Recent writing</h2>
+  <PostList posts={posts} />
 </Base>
+
+<style>
+  h2 {
+    margin-top: 3rem;
+  }
+</style>
