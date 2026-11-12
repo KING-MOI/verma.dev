@@ -14,7 +14,7 @@ const { project } = Astro.props;
   </h2>
   <p class="tagline">{project.tagline}</p>
   <p>{project.description}</p>
-  <p class="lang">{project.language}</p>
+  <p class="lang">{[project.language, ...project.stack].join(" · ")}</p>
 </article>
 
 <style>
