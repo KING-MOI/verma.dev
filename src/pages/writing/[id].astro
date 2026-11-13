@@ -35,8 +35,16 @@ const jsonLd = {
     <header>
       <h1>{post.data.title}</h1>
       <p class="meta">
-        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>·{" "}
-        {minutes} min read
+        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+        {post.data.updated && (
+          <span>
+            updated{" "}
+            <time datetime={post.data.updated.toISOString()}>
+              {formatDate(post.data.updated)}
+            </time>
+          </span>
+        )}
+        <span>{minutes} min read</span>
       </p>
     </header>
     <div class="prose">
@@ -54,6 +62,10 @@ const jsonLd = {
 </Base>
 
 <style>
+  .meta > * + *::before {
+    content: "· ";
+  }
+
   header {
     margin-bottom: 2.5rem;
   }
@@ -74,6 +86,9 @@ const jsonLd = {
   }
 
   .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.5rem;
     margin-top: 0.5rem;
     color: var(--text-muted);
     font-family: var(--font-mono);
