@@ -2,6 +2,7 @@
 title: I started counting tokens and stopped guessing
 description: What a month of per-project token logs taught me about where agent spend actually goes.
 date: 2026-06-02
+updated: 2026-10-12
 ---
 
 For a while my answer to "how much do your agents cost?" was a shrug and a
@@ -40,3 +41,11 @@ before it would have shown up on an invoice.
 You don't need a dashboard product to get this. You need the usage numbers
 your provider already returns, written somewhere you can group by. Start
 counting before you start optimizing.
+
+## Update, October
+
+Prompt caching changed the picture more than anything else since I wrote
+this. Cached input is cheap enough that the "most tokens are input" problem is
+now mostly a "most tokens are *uncached* input" problem. tokentally now splits
+cached and uncached input so you can see which one you are actually paying
+for.
