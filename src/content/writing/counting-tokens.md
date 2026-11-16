@@ -46,6 +46,6 @@ counting before you start optimizing.
 
 Prompt caching changed the picture more than anything else since I wrote
 this. Cached input is cheap enough that the "most tokens are input" problem is
-now mostly a "most tokens are *uncached* input" problem. tokentally now splits
+now mostly a "most tokens are _uncached_ input" problem. tokentally now splits
 cached and uncached input so you can see which one you are actually paying
 for.
